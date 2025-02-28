@@ -12,3 +12,7 @@ CSS COLORS:
 1. Header Done -- headerArea.js
 2. Hero Done -- hero.js
 3. Algorithm Choose Page Done -- algoArea.js
+4. Linear Code Choose from Languages Bar Done 
+5. Initialized Git and Commited first PUSH
+
+

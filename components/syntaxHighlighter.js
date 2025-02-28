@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
+import { motion } from "motion/react";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
@@ -32,10 +33,17 @@ export default function SyntaxHighlighter({ code, language }) {
 
   return (
     <>
-      <div onClick={copyingCode}>
-        {isCopied ? <img src={copiedButton} height="1rem"></img> : <img src={copyButton} height="1rem"></img>}
-       
-      </div>
+      <motion.div
+        whileHover={{ scale: 1.15 }}
+        className="hover:cursor-pointer"
+        onClick={copyingCode}
+      >
+        {isCopied ? (
+          <img src={copiedButton} height="1rem"></img>
+        ) : (
+          <img src={copyButton} height="1rem"></img>
+        )}
+      </motion.div>
     </>
   );
 }

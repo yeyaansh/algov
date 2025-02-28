@@ -47,7 +47,7 @@ export default function LinearSearchArea() {
 
                   // onClick={() => setSelectedId(null)}
                 >
-                  <div className="text-[3rem]  shadow-2xl w-[100%] flex justify-between px-[6rem]">
+                  <div className="text-[3rem]  shadow-2xl w-[100%] flex items-center justify-between px-[6rem] py-[.5rem]">
                     <div>{` ${
                       linearSearchDataList.find(
                         (data) => data.id === selectedId

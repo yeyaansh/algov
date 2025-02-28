@@ -4,16 +4,23 @@ import HeaderArea from "./headerArea";
 import Hero from "./hero";
 import AlgoArea from "./algoArea";
 import LinearSearchArea from "./linearSearchArea";
+import { BrowserRouter, Routes, Route } from "react-router";
 
-function App(){
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <HeaderArea />
+        <Routes>
+          <Route path="/" element={<Hero />}></Route>
+          <Route path="/algos" element={<AlgoArea />}></Route>
+          <Route path="/algorithm-1" element={<LinearSearchArea />}></Route>
+        </Routes>
+      </BrowserRouter>
 
-    return(<>
-    <HeaderArea/>
-    <Hero/>
-    <AlgoArea/>
-    <LinearSearchArea/>
-    
-    </>)
+      {/* <Route path="/1" element={<LinearSearchArea />}></Route> */}
+    </>
+  );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

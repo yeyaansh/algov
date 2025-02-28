@@ -1,9 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import Typed from "typed.js";
+import { useNavigate } from "react-router";
 
 export default function Hero() {
   const el = useRef(null);
+
+  let Navigate = useNavigate();
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -47,6 +50,8 @@ export default function Hero() {
         ></img></div> */}
         <motion.button
           whileHover={{ scale: 1.1 }}
+          onClick={()=>{ Navigate(`/algos`);
+                }}
           className="fixed bottom-16 right-16 cursor-pointer text-primary bg-accent px-4 py-1 rounded-2xl "
         >
           {/* shadow-xl border-l-5  border-t-2 border-[#0c0b0b] */}

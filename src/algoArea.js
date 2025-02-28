@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
 import algoAreaLists from "../utils/algoAreaList";
+import {  useNavigate } from "react-router";
 
 export default function AlgoArea() {
+  let Navigate = useNavigate();
   return (
     <>
       {/* calc(100vh-60.8px) */}
@@ -20,6 +22,9 @@ export default function AlgoArea() {
               {/* &nbsp; FOR EXTRA SPACING */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
+                onClick={() => {
+                  Navigate(`/algorithm-${card.id}`);
+                }}
                 className="bg-accent text-primary px-[2.5rem] py-[1rem] rounded-[5px] cursor-pointer text-3xl hover:bg-hoverAccent"
               >
                 VISUALIZE

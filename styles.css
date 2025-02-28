@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap");
+@import "tailwindcss";
+@theme {
+  --color-primary: #2C2C2C;
+  --color-secondary: #4A90E2;
+  --color-accent: #7CFC00;  
+  --color-overlayTransparent: #0000007f;
+  --color-hoverAccent: #6BE200;
+  --color-hoverSecondary: #3A80D2;
+
+}
+/* 
+@theme {
+  --color-primary: #2C2C2C;
+  --color-secondary: #4A90E2;
+  --color-accent: #2C2C2C;  
+  --color-overlayTransparent: #0000007f;
+  --color-hoverAccent: #2C2C2C;
+  --color-hoverSecondary: #3A80D2;
+
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Reem Kufi Ink";
+  color: white;
+}
+
+#logo {
+  font-family: "Reem Kufi Ink";
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+#hero-page-main-text {
+  font-family: "Reem Kufi Ink";
+  font-weight: bolder;
+}
+
+/* Cursor */
+.typed-cursor {
+  font-size: 3.3rem;
+}

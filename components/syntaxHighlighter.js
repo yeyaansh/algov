@@ -23,6 +23,7 @@ export default function SyntaxHighlighter({ code, language }) {
     try {
       const store = await navigator.clipboard.writeText(code);
       setIsCopied(true);
+      alert("Code Copied!");
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);

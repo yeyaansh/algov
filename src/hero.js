@@ -30,7 +30,7 @@ export default function Hero() {
 
   return (
     <>
-    {/* calc(100vh-60.8px) */}
+      {/* calc(100vh-60.8px) */}
       <div className="h-[100vh] px-16 pt-[124.8px] relative bg-primary">
         <div className="text-[5vw] pt-8 ">
           <span className="text-[6vw]">W</span>elcome To
@@ -43,15 +43,11 @@ export default function Hero() {
           ALGO - VISUALIZER
         </div>
         <span ref={el} className="text-[2.5rem]" />
-        {/* <div className="mt-[16rem]"><img
-            // className="absolute bottom-0 right-[50vw]"
-          width="500px"
-          src="https://oliviagallucci.com/wp-content/uploads/2024/01/bfs.gif"
-        ></img></div> */}
         <motion.button
           whileHover={{ scale: 1.1 }}
-          onClick={()=>{ Navigate(`/algos`);
-                }}
+          onClick={() => {
+            Navigate(`/algos`);
+          }}
           className="fixed bottom-16 right-16 cursor-pointer text-primary bg-accent px-4 py-1 rounded-2xl "
         >
           {/* shadow-xl border-l-5  border-t-2 border-[#0c0b0b] */}

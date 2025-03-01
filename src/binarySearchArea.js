@@ -1,12 +1,10 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import linearSearchDataList, {
-  LinearDescription,
-} from "../utils/linearSearchDataList";
+import binarySearchDataList, {BinaryDescription} from "../utils/binarySearchDataList";
 import SyntaxHighlighter from "../components/syntaxHighlighter";
 import { useNavigate } from "react-router";
 
-export default function LinearSearchArea() {
+export default function BinarySearchArea() {
   const [selectedId, setSelectedId] = useState(null);
   let Navigate = useNavigate();
 
@@ -16,7 +14,7 @@ export default function LinearSearchArea() {
         <div className="h-20 bg-primary mx-16 rounded-[5px] flex justify-between items-center px-16 border-5 border-white">
           {/*Generating Number of Code-Cards*/}
 
-          {linearSearchDataList.map((card) => {
+          {binarySearchDataList.map((card) => {
             return (
               <motion.div
                 draggable="true"
@@ -54,7 +52,7 @@ export default function LinearSearchArea() {
                 >
                   <div className="text-[3rem]  shadow-2xl w-[100%] flex items-center justify-between px-[6rem] py-[.5rem]">
                     <div>{` ${
-                      linearSearchDataList.find(
+                      binarySearchDataList.find(
                         (data) => data.id === selectedId
                       )?.title
                     }`}</div>
@@ -63,12 +61,12 @@ export default function LinearSearchArea() {
 
                     <SyntaxHighlighter
                       code={`${
-                        linearSearchDataList.find(
+                        binarySearchDataList.find(
                           (data) => data.id === selectedId
                         )?.generalLanguage
                       }`}
                       language={`${
-                        linearSearchDataList.find(
+                        binarySearchDataList.find(
                           (data) => data.id === selectedId
                         )?.extension
                       }`}
@@ -78,12 +76,12 @@ export default function LinearSearchArea() {
                   <pre className=" line-numbers text-white overflow-y-auto py-[2rem] w-[100%] px-[3rem]">
                     <code
                       className={`language-${
-                        linearSearchDataList.find(
+                        binarySearchDataList.find(
                           (data) => data.id === selectedId
                         )?.extension
                       }`}
                     >{`${
-                      linearSearchDataList.find(
+                      binarySearchDataList.find(
                         (data) => data.id === selectedId
                       )?.generalLanguage
                     }`}</code>
@@ -95,11 +93,11 @@ export default function LinearSearchArea() {
         </div>
 
         <div className="flex flex-col gap-3 bg-primary mx-16 rounded-[5px] mt-10 p-2 border-5 border-white">
-          <div className="text-4xl font-bold">Linear Search</div>
+          <div className="text-4xl font-bold">Binary Search</div>
           <div className="text-2xl ">
-            {/*LinearAlgoData*/}
+            {/*BinaryAlgoData*/}
 
-            <LinearDescription />
+            <BinaryDescription />
 
             {/*Start Magic Button*/}
 

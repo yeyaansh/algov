@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <>
       {/* calc(100vh-60.8px) */}
-      <div className="h-[100vh] px-16 pt-[124.8px] relative bg-primary">
+      <div className="h-[100vh] medium:px-16 small:px-8 px-4 pt-[124.8px] relative bg-primary">
         <div className="text-[5vw] pt-8 ">
           <span className="text-[6vw]">W</span>elcome To
         </div>
@@ -42,7 +42,7 @@ export default function Hero() {
         >
           ALGO - VISUALIZER
         </div>
-        <span ref={el} className="text-[2.5rem]" />
+        <span ref={el} className="large:text-[2.5rem] medium:text-3xl small:text-2xl text-lg" />
         <motion.button
           whileHover={{ scale: 1.1 }}
           onClick={() => {
@@ -51,8 +51,8 @@ export default function Hero() {
           className="fixed bottom-16 right-16 cursor-pointer text-primary bg-accent px-4 py-1 rounded-2xl "
         >
           {/* shadow-xl border-l-5  border-t-2 border-[#0c0b0b] */}
-          <div className="text-[1.8rem] h-8">Start</div>
-          <div className="text-[2rem]">VISUALIZING</div>
+          <div className="medium:text-[1.8rem] text-[1.2rem] medium:h-8 h-6">Start</div>
+          <div className="medium:text-[2rem] text-[1.4rem] ">VISUALIZING</div>
         </motion.button>
       </div>
     </>

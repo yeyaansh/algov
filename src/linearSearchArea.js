@@ -12,8 +12,8 @@ export default function LinearSearchArea() {
 
   return (
     <>
-      <div className="h-[100vh] pt-[100.8px] bg-primary">
-        <div className="h-20 bg-primary mx-16 rounded-[5px] flex justify-between items-center px-16 border-5 border-white">
+      <div className="h-[100vh] medium:pt-[100.8px] small:pt-[80.8px] pt-[65.8px] bg-primary">
+        <div className="small:h-20 bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] flex flex-wrap small:flex-nowrap small:flex-row justify-between items-center  medium:px-16 px-8 py-2 gap-1 small:border-5 border-3 border-white">
           {/*Generating Number of Code-Cards*/}
 
           {linearSearchDataList.map((card) => {
@@ -26,7 +26,7 @@ export default function LinearSearchArea() {
                 onClick={() => setSelectedId(card.id)}
                 layoutId={`element-${card.id}`}
                 key={card.id}
-                className="bg-primary  text-white px-[2.5rem] py-[.3rem] rounded-[5px]  cursor-pointer text-3xl "
+                className="bg-primary  text-white large:px-10 medium:px-4 px-2 small:pt-[.3rem] pt-0.5 rounded-[5px] text-center cursor-pointer medium:text-3xl small:text-2xl text-xl "
               >
                 {card.title}
               </motion.div>
@@ -49,11 +49,11 @@ export default function LinearSearchArea() {
                   animate={{ borderRadius: 10 }}
                   exit={{ borderRadius: 5 }}
                   transition={{ type: "spring", stiffness: 100 }}
-                  className="w-[70%] h-[80%] absolute flex flex-col   justify-center items-center mt-[60.8px] bg-primary"
+                  className="w-[75vw] h-[80vh] absolute flex flex-col   justify-center items-center mt-[60.8px] bg-primary"
                   layoutId={`element-${selectedId}`}
                 >
-                  <div className="text-[3rem]  shadow-2xl w-[100%] flex items-center justify-between px-[6rem] py-[.5rem]">
-                    <div>{` ${
+                  <div className="small:text-5xl text-2xl shadow-2xl w-[100%] flex items-center extrasmall:justify-between justify-center gap-12 px-[6rem] py-[.5rem]">
+                    <div className="h-full flex items-center justify-center">{` ${
                       linearSearchDataList.find(
                         (data) => data.id === selectedId
                       )?.title
@@ -75,7 +75,7 @@ export default function LinearSearchArea() {
                     />
                   </div>
 
-                  <pre className=" line-numbers text-white overflow-y-auto py-[2rem] w-[100%] px-[3rem]">
+                  <pre className=" line-numbers text-white whitespace-pre-wrap overflow-y-auto py-[2rem] w-[100%] large:px-[3rem] medium:px-4">
                     <code
                       className={`language-${
                         linearSearchDataList.find(
@@ -94,9 +94,9 @@ export default function LinearSearchArea() {
           </AnimatePresence>
         </div>
 
-        <div className="flex flex-col gap-3 bg-primary mx-16 rounded-[5px] mt-10 p-2 border-5 border-white">
+        <div className="flex flex-col bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] medium:mt-10 mt-4 p-2 small:border-5 border-3 border-white">
           <div className="text-4xl font-bold">Linear Search</div>
-          <div className="text-2xl ">
+          <div className="small:text-xl text-lg">
             {/*LinearAlgoData*/}
 
             <LinearDescription />

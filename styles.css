@@ -7,7 +7,26 @@
   --color-overlayTransparent: #0000007f;
   --color-hoverAccent: #6be200;
   --color-hoverSecondary: #3a80d2;
+  --breakpoint-extrasmall: 370px;
+  --breakpoint-small: 550px;
+  --breakpoint-medium: 850px;
+  --breakpoint-large: 1115px;
 }
+/* 
+@theme {
+  --color-primary: #2c2c2c;
+  --color-secondary: #4a90e2;
+  --color-accent: #7cfc00;
+  --color-overlayTransparent: #0000007f;
+  --color-hoverAccent: #6be200;
+  --color-hoverSecondary: #3a80d2;
+  --breakpoint-extrasmall: 370px;
+  --breakpoint-small: 550px;
+  --breakpoint-medium: 870px;
+  --breakpoint-large: 1115px;
+} */
+
+
 /* 
 @theme {
   --color-primary: #2C2C2C;
@@ -30,8 +49,6 @@ body {
 
 #logo {
   font-family: "Reem Kufi Ink";
-  font-size: 1.7rem;
-  text-align: center;
 }
 
 #hero-page-main-text {

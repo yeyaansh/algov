@@ -19,3 +19,25 @@ Extra Space in HTML:
 3. Algorithm Choose Page Done -- algoArea.js
 4. Linear Code Choose from Languages Bar Done 
 5. Initialized Git and Commited first PUSH
+
+
+--------
+
+
+Colors for Light-Mode:
+lightPrimary:#F8F9FA
+lightSecondary:#2E8B57
+lightAccent:#FF6B6B
+hoverLightAccent: #E55A5A
+secondaryLightButton #88C999
+hoverSecondaryLightButton #70B080
+
+-----------
+
+Headings: text on lightPrimary:#333333
+Body: text on lightPrimary:#4A4A4A
+Code: text on lightPimary:#2E8B57
+Border: #E0E0E0
+
+
+----------

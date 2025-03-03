@@ -223,9 +223,8 @@ export default linearSearchDataList;
 export function LinearDescription() {
   return (
     <>
-      <div className="whitespace-pre-wrap font-mono">
-        {`
-        
+      <div className="whitespace-pre-wrap font-mono ">
+        {`     
 Linear Search is like looking for your lost keys in your house. You don’t know where they are, so you start searching room by room, checking every spot until you find them. If you’ve searched the entire house and still haven’t found them, you know they’re not there.
         
 In programming terms, Linear Search is a method to find a specific value (called the key) in a list by checking each element one by one from the beginning to the end.
@@ -252,50 +251,50 @@ We have an array of numbers: [42, 13, 8, 64, 25, 61, 3, 28].
 We want to find the number 25 in this array.
 Step-by-Step Process:
         
-            Start at the beginning:
-            Look at the first number in the array, which is 42.
-            Ask: Is 42 equal to 25?
-            No. So, move to the next number.
+Start at the beginning:
+Look at the first number in the array, which is 42.
+Ask: Is 42 equal to 25?
+No. So, move to the next number.
         
-            Second number:
-            The next number is 13.
-            Ask: Is 13 equal to 25?
-            No. Move to the next number.
+Second number:
+The next number is 13.
+Ask: Is 13 equal to 25?
+No. Move to the next number.
         
-            Third number:
-            The next number is 8.
-            Ask: Is 8 equal to 25?
-            No. Move to the next number.
+Third number:
+The next number is 8.
+Ask: Is 8 equal to 25?
+No. Move to the next number.
         
-            Fourth number:
-            The next number is 64.
-            Ask: Is 64 equal to 25?
-            No. Move to the next number.
+Fourth number:
+The next number is 64.
+Ask: Is 64 equal to 25?
+No. Move to the next number.
         
-            Fifth number:
-            The next number is 25.
-            Ask: Is 25 equal to 25?
-            Yes! You’ve found the number you were looking for.
+Fifth number:
+The next number is 25.
+Ask: Is 25 equal to 25?
+Yes! You’ve found the number you were looking for.
         
 What Happens If the Key Isn’t in the Array?
         
 Let’s say you were searching for the number 10 instead of 25. Here’s what would happen:
         
-            Check 42: Not a match.
+Check 42: Not a match.
         
-            Check 13: Not a match.
+Check 13: Not a match.
         
-            Check 8: Not a match.
+Check 8: Not a match.
         
-            Check 64: Not a match.
+Check 64: Not a match.
         
-            Check 25: Not a match.
+Check 25: Not a match.
         
-            Check 61: Not a match.
+Check 61: Not a match.
         
-            Check 3: Not a match.
+Check 3: Not a match.
         
-            Check 28: Not a match.
+Check 28: Not a match.
         
 You’ve checked every number in the array, and 10 isn’t there. So, you conclude that 10 is not in the array.
 Why Is It Called "Linear"?
@@ -303,11 +302,11 @@ Why Is It Called "Linear"?
 The word "linear" comes from the idea of moving in a straight line. In Linear Search, you go through the array in a straight line, checking each element one after the other. There’s no jumping around or skipping elements—just a simple, step-by-step process.
 When Should You Use Linear Search?
         
-            Small lists: If the list is short, Linear Search is quick and easy.
+Small lists: If the list is short, Linear Search is quick and easy.
         
-            Unsorted lists: If the list isn’t sorted, Linear Search is one of the few options you have.
+Unsorted lists: If the list isn’t sorted, Linear Search is one of the few options you have.
         
-            Simplicity: If you want a method that’s easy to understand and implement, Linear Search is perfect.
+Simplicity: If you want a method that’s easy to understand and implement, Linear Search is perfect.
         
 Algorithm Complexity:
         

@@ -81,7 +81,7 @@ export default function LinearSearchArea() {
                         linearSearchDataList.find(
                           (data) => data.id === selectedId
                         )?.extension
-                      }`}
+                      } `}
                     >{`${
                       linearSearchDataList.find(
                         (data) => data.id === selectedId
@@ -96,7 +96,7 @@ export default function LinearSearchArea() {
 
         <div className="flex flex-col bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] medium:mt-10 mt-4 p-2 small:border-5 border-3 border-white">
           <div className="text-4xl font-bold">Linear Search</div>
-          <div className="small:text-xl text-lg">
+          <div className="medium:text-xl small:text-lg text-[14px]">
             {/*LinearAlgoData*/}
 
             <LinearDescription />
@@ -108,11 +108,11 @@ export default function LinearSearchArea() {
               onClick={() => {
                 Navigate(`/algos`);
               }}
-              className="z-10 fixed bottom-16 right-20 cursor-pointer text-primary bg-accent px-6 py-1 rounded-2xl "
+              className=" z-10 fixed bottom-4 large:right-13 medium:right-5 small:right-7 right-6 cursor-pointer text-primary bg-accent medium:m-6 px-2 medium:py-1 small:py-0.5 rounded-2xl "
             >
               {/* shadow-xl border-l-5  border-t-2 border-[#0c0b0b] */}
-              <div className="text-[1.8rem] h-8">Start</div>
-              <div className="text-[2rem]">MAGIC</div>
+              <div className="small:text-[1.8rem] text-lg small:h-8 h-5">Start</div>
+              <div className="small:text-[2rem] text-2xl">MAGIC</div>
             </motion.button>
           </div>
         </div>

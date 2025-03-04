@@ -41,3 +41,18 @@ Border: #E0E0E0
 
 
 ----------
+
+
+FONT SIZE OF syntaxHighlighter
+
+/* Target the <pre> and <code> elements */
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 14px; /* Adjust the font size */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+/* Optional: Adjust line numbers font size */
+.line-numbers .line-numbers-rows {
+  font-size: 14px;
+}

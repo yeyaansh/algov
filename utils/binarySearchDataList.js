@@ -264,13 +264,15 @@ export function BinaryDescription() {
   return (
     <>
       <div className="whitespace-pre-wrap font-mono">
-        {`Imagine you’re playing a guessing game with a friend. They’re thinking of a number between 1 and 100, and you have to guess it. Instead of guessing every number one by one, you use a smarter strategy: you always guess the middle number. If your guess is too high, you ignore the higher half. If it’s too low, you ignore the lower half. You keep doing this until you find the correct number.
+        {
+`
+Imagine you’re playing a guessing game with a friend. They’re thinking of a number between 1 and 100, and you have to guess it. Instead of guessing every number one by one, you use a smarter strategy: you always guess the middle number. If your guess is too high, you ignore the higher half. If it’s too low, you ignore the lower half. You keep doing this until you find the correct number.
 
 Binary Search works exactly like this. It’s a super-efficient way to find a specific value (called the target) in a sorted list. Unlike Linear Search, which checks every element one by one, Binary Search halves the search space with each step, making it much faster.
 
 `}
-        <div className="flex justify-center items-center overflow-hidden h-[35rem]">
-          <div className="ed-[50px]">
+        <div className="flex justify-center items-center overflow-hidden medium:h-[40rem] small:h-[30rem]">
+          <div className="">
             <img src={binaryImage} width="800px" className="bg-white "></img>
           </div>
         </div>
@@ -282,53 +284,53 @@ We have a sorted array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91].
 We want to find the number 23 in this array.
 Step-by-Step Process:
 
-    Find the middle element:
-    The array has 10 elements. The middle is at position (0 + 9) / 2 = 4 (we use 0-based indexing).
-    The middle element is 16.
-    Ask: Is 16 equal to 23?
-    No.
-    Is 16 less than 23?
-    Yes. So, we ignore the left half (all numbers less than or equal to 16).
+Find the middle element:
+The array has 10 elements. The middle is at position (0 + 9) / 2 = 4 (we use 0-based indexing).
+The middle element is 16.
+Ask: Is 16 equal to 23?
+No.
+Is 16 less than 23?
+Yes. So, we ignore the left half (all numbers less than or equal to 16).
 
-    Updated search space: [23, 38, 56, 72, 91].
+Updated search space: [23, 38, 56, 72, 91].
 
-    Find the new middle element:
-    The new search space has 5 elements. The middle is at position (5 + 9) / 2 = 7.
-    The middle element is 56.
-    Ask: Is 56 equal to 23?
-    No.
-    Is 56 less than 23?
-    No. So, we ignore the right half (all numbers greater than or equal to 56).
+Find the new middle element:
+The new search space has 5 elements. The middle is at position (5 + 9) / 2 = 7.
+The middle element is 56.
+Ask: Is 56 equal to 23?
+No.
+Is 56 less than 23?
+No. So, we ignore the right half (all numbers greater than or equal to 56).
 
-    Updated search space: [23, 38].
+Updated search space: [23, 38].
 
-    Find the new middle element:
-    The new search space has 2 elements. The middle is at position (5 + 6) / 2 = 5.
-    The middle element is 23.
-    Ask: Is 23 equal to 23?
-    Yes! You’ve found the target.
+Find the new middle element:
+The new search space has 2 elements. The middle is at position (5 + 6) / 2 = 5.
+The middle element is 23.
+Ask: Is 23 equal to 23?
+Yes! You’ve found the target.
 
 What Happens If the Target Isn’t in the Array?
 
 Let’s say you were searching for the number 20 instead of 23. Here’s what would happen:
 
-    Middle element: 16.
-    Is 16 equal to 20? No.
-    Is 16 less than 20? Yes.
-    Ignore the left half.
-    Updated search space: [23, 38, 56, 72, 91].
+Middle element: 16.
+Is 16 equal to 20? No.
+Is 16 less than 20? Yes.
+Ignore the left half.
+Updated search space: [23, 38, 56, 72, 91].
 
-    Middle element: 56.
-    Is 56 equal to 20? No.
-    Is 56 less than 20? No.
-    Ignore the right half.
-    Updated search space: [23, 38].
+Middle element: 56.
+Is 56 equal to 20? No.
+Is 56 less than 20? No.
+Ignore the right half.
+Updated search space: [23, 38].
 
-    Middle element: 23.
-    Is 23 equal to 20? No.
-    Is 23 less than 20? No.
-    Ignore the right half.
-    Updated search space: [] (empty).
+Middle element: 23.
+Is 23 equal to 20? No.
+Is 23 less than 20? No.
+Ignore the right half.
+Updated search space: [] (empty).
 
 Since the search space is now empty, you conclude that 20 is not in the array.
 Why Is It Called "Binary"?
@@ -346,11 +348,11 @@ Binary Search is incredibly efficient. Here’s why:
 
 Time Complexity:
 
-        Best Case: O(1) – The target is the middle element.
+Best Case: O(1) – The target is the middle element.
 
-        Worst Case: O(log n) – The target is at the beginning or end, or not in the list at all.
+Worst Case: O(log n) – The target is at the beginning or end, or not in the list at all.
 
-        Average Case: O(log n) – On average, it takes logarithmic time to find the target.
+Average Case: O(log n) – On average, it takes logarithmic time to find the target.
 
 Here, n is the number of elements in the array. For example, if the array has 1,000 elements, Binary Search will take at most 10 steps (because log₂1000 ≈ 10).
 
@@ -360,13 +362,13 @@ Binary Search uses constant space (O(1)) because it doesn’t require extra memo
 
 Key Takeaways:
 
-    Binary Search is a fast and efficient way to find a target in a sorted list.
+Binary Search is a fast and efficient way to find a target in a sorted list.
 
-    It works by repeatedly dividing the search space in half.
+It works by repeatedly dividing the search space in half.
 
-    It has a time complexity of O(log n), which is much faster than Linear Search’s O(n) for large lists.
+It has a time complexity of O(log n), which is much faster than Linear Search’s O(n) for large lists.
 
-    It only works on sorted lists, so make sure your data is sorted before using it.
+It only works on sorted lists, so make sure your data is sorted before using it.
 
 Final Thought:
 

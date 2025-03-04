@@ -12,6 +12,34 @@
   --breakpoint-medium: 850px;
   --breakpoint-large: 1115px;
 }
+
+/* Target the <pre> and <code> elements */
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 10px; /* Adjust the font size */
+  /* line-height: 1.5; Adjust line height for better readability */
+}
+
+
+.line-numbers .line-numbers-rows {
+  font-size: 10px;
+}
+
+
+@media (min-width: 850px) {
+  code[class*="language-"] {
+    font-size: 14px; /* Adjust the font size */
+    /* line-height: 1.5; Adjust line height for better readability */
+
+  }
+
+  .line-numbers .line-numbers-rows {
+    font-size: 14px;
+  }
+}
+
+/* Optional: Adjust line numbers font size */
+
 /* 
 @theme {
   --color-primary: #2c2c2c;
@@ -25,7 +53,6 @@
   --breakpoint-medium: 870px;
   --breakpoint-large: 1115px;
 } */
-
 
 /* 
 @theme {

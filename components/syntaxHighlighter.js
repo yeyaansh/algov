@@ -36,13 +36,13 @@ export default function SyntaxHighlighter({ code, language }) {
     <>
       <motion.div
         whileHover={{ scale: 1.15 }}
-        className="hover:cursor-pointer min-w-5   "
+        className="hover:cursor-pointer small:min-w-12 min-w-8 max-w-8 "
         onClick={copyingCode}
       >
-        {isCopied ? (<div className="py-8">
+        {isCopied ? (<div className="small:w-[3rem] w-[1.5rem]">
           <img src={copiedButton}></img></div>
         ) : (
-          <div><img src={copyButton} className="small:h-[3rem] h-[1.5rem]"></img></div>
+          <div><img src={copyButton}></img></div>
         )}
       </motion.div>
     </>

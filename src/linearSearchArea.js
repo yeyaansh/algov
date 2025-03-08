@@ -4,15 +4,16 @@ import linearSearchDataList, {
   LinearDescription,
 } from "../utils/linearSearchDataList";
 import SyntaxHighlighter from "../components/syntaxHighlighter";
-import { useNavigate } from "react-router";
+import LinearInputArrayValues from "../components/linear/linearSearchInputArrayValues";
 
 export default function LinearSearchArea() {
   const [selectedId, setSelectedId] = useState(null);
-  let Navigate = useNavigate();
+  const [clicked, setClicked] = useState(false);
+
 
   return (
     <>
-      <div className="h-[100vh] medium:pt-[100.8px] small:pt-[80.8px] pt-[65.8px] bg-primary">
+      <div className=" medium:pt-[100.8px] small:pt-[80.8px] pt-[65.8px] bg-primary ">
         <div className="small:h-20 bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] flex flex-wrap small:flex-nowrap small:flex-row justify-between items-center  medium:px-16 px-8 py-2 gap-1 small:border-5 border-3 border-white">
           {/*Generating Number of Code-Cards*/}
 
@@ -94,7 +95,7 @@ export default function LinearSearchArea() {
           </AnimatePresence>
         </div>
 
-        <div className="flex flex-col bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] medium:mt-10 mt-4 p-2 small:border-5 border-3 border-white">
+       { clicked === false ? <div className="flex flex-col bg-primary large:mx-16 medium:mx-8 mx-4 rounded-[5px] medium:mt-10 mt-4 p-2 small:border-5 border-3 border-white">
           <div className="text-4xl font-bold">Linear Search</div>
           <div className="medium:text-xl small:text-lg text-[14px]">
             {/*LinearAlgoData*/}
@@ -106,16 +107,20 @@ export default function LinearSearchArea() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               onClick={() => {
-                Navigate(`/algos`);
+                // Navigate("/");
+                setClicked(true);
               }}
-              className=" z-10 fixed bottom-4 large:right-13 medium:right-5 small:right-7 right-6 cursor-pointer text-primary bg-accent medium:m-6 px-2 medium:py-1 small:py-0.5 rounded-2xl "
+              className=" z-10 fixed bottom-4 large:right-13 medium:right-5 small:right-7 right-6 cursor-pointer text-primary bg-accent medium:m-8 px-5 medium:py-1 small:py-0.5 rounded-2xl "
             >
               {/* shadow-xl border-l-5  border-t-2 border-[#0c0b0b] */}
-              <div className="small:text-[1.8rem] text-lg small:h-8 h-5">Start</div>
+              <div className="small:text-[1.8rem] text-lg small:h-8 h-5">
+                Start
+              </div>
               <div className="small:text-[2rem] text-2xl">MAGIC</div>
             </motion.button>
           </div>
-        </div>
+        </div> : <LinearInputArrayValues/>
+        }
       </div>
     </>
   );

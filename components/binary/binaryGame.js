@@ -33,13 +33,13 @@ const BinaryGame = ({ array, target }) => {
   }, [found.binary, low, high]);
 
   return (
-    <div className="flex flex-col items-center space-y-6 mt-5">
-      <div className="flex gap-2">
+    <div className="flex flex-col items-center space-y-6 m-6 small:mt-16">
+      <div className="flex gap-1 small:gap-2">
         {array.map((num, idx) => (
           <motion.div
             key={idx}
-            className={`p-4 border rounded-md text-center w-10 h-10 flex items-center justify-center ${
-              binaryIndex === idx ? "bg-green-500 text-white" : "bg-primary"
+            className={`p-4 border rounded-md text-center w-4 small:w-10 h-4 small:h-10 flex items-center justify-center ${
+              binaryIndex === idx ? "bg-accent text-primary" : "bg-primary"
             }`}
           >
             {num}
@@ -47,20 +47,20 @@ const BinaryGame = ({ array, target }) => {
         ))}
       </div>
       <motion.div
-        className="relative right-55  small:mb-16 px-3 py-1 bg-green-500 text-white rounded-md"
+        className="relative right-[8.4rem] text-sm small:right-55 small:mb-16 px-1 small:px-3 py-1 bg-accent text-primary rounded-md"
         animate={{
-          x: binaryIndex !== null ? binaryIndex * 50 : (array.length - 1) * 50,
+          x: binaryIndex !== null ? binaryIndex * 30 : (array.length - 1) * 30,
         }}
       >
         Binary Search
       </motion.div>
       {found.binary && (
-        <div className="text-xl text-green-600">
+        <div className="text-xl text-accent">
           Binary Search Found the Target!
         </div>
       )}
       {found.notFound && (
-        <div className="text-xl text-red-600 mt-4">❌ Target Not Found!</div>
+        <div className="text-xl text-red-600">❌ Target Not Found!</div>
       )}
     </div>
   );

@@ -28,12 +28,12 @@ const LinearGame = ({ array, target }) => {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-6 mt-15 mx-14">
-      <div className="flex flex-wrap space-x-2">
-        {array.map((num, idx) => (
+      <div className="flex gap-1 small:gap-2">
+      {array.map((num, idx) => (
           <motion.div
             key={idx}
-            className={`p-4 border rounded-md text-center w-10 h-10 flex items-center justify-center ${
-              linearIndex === idx ? "bg-blue-500 text-white" : "bg-primary"
+            className={`p-4 border rounded-md text-center w-4 small:w-10 h-4 small:h-10 flex items-center justify-center ${
+              linearIndex === idx ? "bg-secondary text-white" : "bg-primary"
             }`}
           >
             {num}
@@ -41,12 +41,12 @@ const LinearGame = ({ array, target }) => {
         ))}
       </div>
       <motion.div
-        className="relative right-55 small:mb-16 px-3 py-1 bg-blue-500 text-white rounded-md"
+        className="relative right-[8.4rem] text-sm small:right-55 small:mb-16 px-1 small:px-3 py-1 bg-secondary text-white rounded-md"
         animate={{
           x:
             linearIndex < array.length
-              ? linearIndex * 50
-              : (array.length - 1) * 50,
+              ? linearIndex * 30
+              : (array.length - 1) * 30,
         }}
       >
         Linear Search
@@ -55,13 +55,13 @@ const LinearGame = ({ array, target }) => {
 
 
       {found.linear && (
-        <div className="text-xl fixed left-0 bottom-8 small:static w-[100%] h-2 text-white">
+        <div className="text-xl text-secondary">
           Linear Search Found the Target!
         </div>
       )}
 
       {found.notFound && (
-        <div className="text-xl fixed left-0 bottom-8 small:static w-[100%] text-red-600 mt-4">❌ Target Not Found!</div>
+        <div className="text-xl  text-red-600 ">❌ Target Not Found!</div>
       )}
     </div>
   );

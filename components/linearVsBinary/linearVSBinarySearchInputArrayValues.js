@@ -104,28 +104,28 @@ export default function LinearVsBinarySearchInputArrayValue() {
   return (
     <>
       {/* {main box} */}
-      <div className="bg-primary h-[100vh] pt-[30.8px] text-center">
+      <div className="bg-primary h-[100vh] pt-[40.8px] small:pt-[60px] text-center">
         <div className="flex justify-center mt-8">
           <div className="flex flex-col justify-center items-center gap-6 ">
             <div className="flex text-left w-[100%] small:px-0 mx-18 px-18">
-              <h3>Enter Array Values</h3>
+              <h3  className="text-xl small:text-3xl h-2 small:h-6">Enter Array Values</h3>
             </div>
             {/* array values boxes using map function */}
             {
-              <div className="flex flex-wrap small:mx-0 mx-18 gap-2 py-4 bg-secondary w-fit px-4 rounded-[5px] items-center justify-center">
+              <div className="flex flex-wrap small:mx-0 mx-18 gap-1 small:gap-2 py-2 small:py-4 bg-secondary w-fit px-2 small:px-4 rounded-[5px] items-center justify-center">
                 {valueList.map((card) => {
                   return (
                     <>
                       <div
                         key={card.id}
-                        className="border-3 border-white rounded-[5px]"
+                        className="border-2 small:border-3 border-white rounded-[5px]"
                       >
                         <input
                           required
                           type="text"
                           placeholder={card.id}
                           id={`inputField-${card.id}`}
-                          className="large:w-[5vw] medium:w-[6vw] small:w-[7vw] w-[3.5rem] h-[2rem] text-center text-2xl  border-transparent"
+                          className="large:w-[5vw] medium:w-[6vw] small:w-[7vw] w-[2.5rem] h-[2rem] text-center text-xl small:text-2xl  border-transparent"
                         ></input>
                       </div>
                     </>
@@ -142,7 +142,7 @@ export default function LinearVsBinarySearchInputArrayValue() {
                     type="text"
                     id="targetField"
                     required
-                    className="border-2 border-white text-xl rounded-[5px] text-center py-1"
+                    className="border-2 border-white text-[.95rem] small:text-xl rounded-[5px] text-center py-1"
                     placeholder="Enter Target Value"
                   ></input>
                 </div>
@@ -150,7 +150,7 @@ export default function LinearVsBinarySearchInputArrayValue() {
                   {/* reset button */}
                   <button
                     onClick={clearAll}
-                    className="bg-red-500 px-4 py-1 rounded-[5px] text-xl text-white hover:bg-red-600 cursor-pointer"
+                    className="bg-red-500 px-4 py-1 rounded-[5px] text-[.95rem] small:text-xl text-white hover:bg-red-600 cursor-pointer"
                   >
                     Reset
                   </button>
@@ -159,9 +159,9 @@ export default function LinearVsBinarySearchInputArrayValue() {
                     onClick={() => {
                       restoreDefault();
                     }}
-                    className="bg-yellow-500 px-4 py-1 rounded-[5px] text-xl text-white hover:bg-yellow-600 cursor-pointer"
+                    className="bg-yellow-500 px-4 py-1 rounded-[5px] text-[.95rem] small:text-xl text-white hover:bg-yellow-600 cursor-pointer"
                   >
-                    Restore to Default
+                    Default
                   </button>
                   {/* submit button */}
                   <button
@@ -170,9 +170,9 @@ export default function LinearVsBinarySearchInputArrayValue() {
                         submit();
                       }
                     }}
-                    className="bg-accent px-4 py-1 rounded-[5px] text-xl text-primary hover:bg-hoverAccent cursor-pointer"
+                    className="bg-accent px-4 py-1 rounded-[5px] text-[.95rem] small:text-xl text-primary hover:bg-hoverAccent cursor-pointer"
                   >
-                    Submit
+                    Run
                   </button>
                 </div>
               </div>

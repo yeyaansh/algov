@@ -2,7 +2,6 @@
   "name": "algov",
   "version": "1.0.0",
   "description": "\"algorithm visualizer app\"",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +9,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.13.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -19,6 +19,7 @@
     "@mui/material": "^6.4.7",
     "@reduxjs/toolkit": "^2.6.0",
     "@tailwindcss/postcss": "^4.0.9",
+    "framer-motion": "^12.4.10",
     "motion": "^12.4.7",
     "prismjs": "^1.29.0",
     "react": "^19.0.0",

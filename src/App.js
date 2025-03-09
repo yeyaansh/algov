@@ -7,7 +7,7 @@ import LinearSearchArea from "./linearSearchArea";
 import BinarySearchArea from "./binarySearchArea";
 import { BrowserRouter, Routes, Route } from "react-router";
 import LinearVsBinarySearchInputArrayValue from "../components/linearVsBinary/linearVSBinarySearchInputArrayValues";
-import Footer from "../footer/footer";
+import Footer from "../components/footer/footer";
 
 function App() {
   return (

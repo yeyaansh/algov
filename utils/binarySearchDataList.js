@@ -8,7 +8,7 @@ const binaryDataList = [
     generalLanguage: `
     #include <stdio.h>
 
-int main() {
+    int main() {
     int size, target;
 
     // Ask the user for the size of the array
@@ -18,7 +18,7 @@ int main() {
     int arr[size]; // Declare an array of the given size
 
     // Ask the user to input sorted array elements
-    printf("Enter %d sorted elements for the array:\n", size);
+    printf("Enter %d sorted elements for the array:\\n", size);
     for (int i = 0; i < size; i++) {
         scanf("%d", &arr[i]);
     }
@@ -49,9 +49,9 @@ int main() {
 
     // Display the result
     if (found == 1) {
-        printf("Element %d found at index %d.\n", target, index);
+        printf("Element %d found at index %d.\\n", target, index);
     } else {
-        printf("Element %d not found in the array.\n", target);
+        printf("Element %d not found in the array.\\n", target);
     }
 
     return 0;
@@ -74,7 +74,7 @@ int main() {
     int arr[size]; // Declare an array of the given size
 
     // Ask the user to input sorted array elements
-    cout << "Enter " << size << " sorted elements for the array:\n";
+    cout << "Enter " << size << " sorted elements for the array:\\n";
     for (int i = 0; i < size; i++) {
         cin >> arr[i];
     }
@@ -105,9 +105,9 @@ int main() {
 
     // Display the result
     if (found) {
-        cout << "Element " << target << " found at index " << index << ".\n";
+        cout << "Element " << target << " found at index " << index << ".\\n";
     } else {
-        cout << "Element " << target << " not found in the array.\n";
+        cout << "Element " << target << " not found in the array.\\n";
     }
 
     return 0;
